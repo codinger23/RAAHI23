@@ -1,0 +1,277 @@
+/* Custom Styles */
+header {
+    background-color: #9DC08B;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    color: #EDF1D6;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    color: #EDF1D6;
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #609966;
+}
+/* Custom Styles */
+header {
+    background: linear-gradient(to right, #9DC08B, #EDF1d6, #609966);
+    padding: 20px 0;
+}
+/* Custom Styles */
+/* Custom Styles */
+/* .navbar {
+    background: linear-gradient(to right, #9DC08B, #609966);
+}
+Custom Styles */
+.navbar-nav .nav-link {
+    color: #EDF1D6;
+    margin-left: 20px;
+    font-weight: bold; /* Add this line */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #609966;
+}
+/* Custom Styles */
+/* Custom Styles */
+#services {
+    background: linear-gradient(to right, #EDF1D6, #9DC08B);
+    color: #40513B;
+}
+
+.service-heading {
+    font-weight: bold;
+    color: #40513B;
+}
+
+.service-heading:hover {
+    color: #609966;
+}
+
+.service-icon {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: #609966;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.service-icon .fa {
+    color: #EDF1D6;
+}
+
+.text-muted {
+    color: #40513B;
+}
+
+/* Custom Styles */
+#destinations {
+    background: linear-gradient(to right, #40513B, #609966);
+    color: #EDF1D6;
+    padding: 60px 0;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.destination-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+}
+
+.destination-img {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.destination-img img {
+    width: 100%;
+    height: auto;
+}
+
+.destination-info {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.destination-info h4 {
+    margin-top: 0;
+}
+
+.destination-info p {
+    margin-bottom: 0;
+}
+/* Custom Styles */
+#testimonials {
+    background-color: #EDF1D6;
+    color: #40513B;
+    padding: 60px 0;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    padding: 30px;
+    background-color: #9DC08B;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Custom Styles */
+#features {
+    background-color: #EDF1D6;
+    color: #40513B;
+    padding: 60px 0;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-item i {
+    color: #9DC08B;
+    margin-bottom: 20px;
+}
+
+.feature-heading {
+    font-weight: bold;
+}
+
+.text-muted {
+    font-style: italic;
+}
+/* Custom Styles */
+#carousel {
+    background-color: #40513B; /* New color */
+    color: #EDF1D6;
+    padding: 60px 0;
+}
+
+.carousel-caption h5 {
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-style: italic;
+}
+/* Add space between sections */
+section {
+    margin-bottom: 40px; /* Adjust the value as needed */
+}
+.search-result {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* Logo Styles */
+.logo-img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.btn{
+    background-color: #40513B;
+}
+
+/* Custom Styles */
+#subscribe {
+    padding: 60px 0;
+}
+
+#subscribe h2 {
+    margin-bottom: 30px;
+}
+
+#subscribe .input-group {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Custom Styles for Search Results Page */
+
+/* Overall Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDF1D6;
+    color: #333;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Filter Section */
+.filter-section {
+    background-color: #9DC08B; /* Light green background color */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Individual Filter */
+.filter-section .form-group {
+    margin-bottom: 15px;
+}
+
+/* Search Results Section */
+#searchResults {
+    margin-top: 20px;
+}
+
+/* Individual Search Result Item */
+.search-result {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Price Display */
+.price-display {
+    font-weight: bold;
+    color: #28a745; /* Green color for price */
+}
+
+/* Phone Number Section */
+.phone-section {
+    background-color: #609966; /* Dark green background color */
+    padding: 20px;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <form class="form-inline my-2 my-lg-0 ml-auto" action="register.php" method="post">
+        <!-- Your form fields -->
+    </form>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Website</a>
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Search Results</h1>
+        
+        <!-- Filter Section -->
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Price Range Filter -->
+             <!-- Price Range Filter -->
+        <div class="form-group">
+            <label for="priceRange">Price Range:</label>
+            <input type="range" class="form-control-range" id="priceRange">
+            <div class="d-flex justify-content-between mt-2">
+                <span>Min Price: <span id="minPriceDisplay">$0</span></span>
+                <span>Max Price: <span id="maxPriceDisplay">$1000</span></span>
+            </div>
+        </div>
+
+            </div>
+            <div class="col-md-3">
+                <!-- Mode of Travel Filter -->
+                <div class="form-group">
+                    <label for="modeOfTravel">Mode of Travel:</label>
+                    <select class="form-control" id="modeOfTravel">
+                        <option value="all">All</option>
+                        <option value="flight">Flight</option>
+                        <option value="train">Train</option>
+                        <option value="bus">Bus</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <!-- Guide Filter -->
+                <div class="form-group">
+                    <label for="guide">Guide:</label>
+                    <select class="form-control" id="guide">
+                        <option value="all">All</option>
+                        <option value="guide">With Guide</option>
+                        <option value="noguide">Without Guide</option>
+                    </select>
+                </div>
+            </div>
+          
+        </div>
+
+        <!-- Search Results Section -->
+        <div id="searchResults">
+            <!-- Sample search result items for demonstration -->
+            <div class="search-result">
+                <h3>Search Result Title</h3>
+                <p>Description of the search result goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="price-display">Price: $500</p>
+            </div>
+            <div class="search-result">
+                <h3>Another Search Result</h3>
+                <p>Description of another search result. Nulla facilisi. Sed in efficitur magna.</p>
+                <p class="price-display">Price: $750</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const priceRange = document.getElementById("priceRange");
+            const minPriceDisplay = document.getElementById("minPriceDisplay");
+            const maxPriceDisplay = document.getElementById("maxPriceDisplay");
+
+            // Initialize the displayed price values
+            minPriceDisplay.textContent = "$0";
+            maxPriceDisplay.textContent = "$1000";
+
+            // Function to update the displayed price values as the slider is moved
+            priceRange.addEventListener("input", function() {
+                const selectedPrice = parseInt(this.value);
+                minPriceDisplay.textContent = "$" + selectedPrice;
+            });
+
+            // Function to prompt the user to confirm the selected price
+            priceRange.addEventListener("change", function() {
+                const selectedPrice = parseInt(this.value);
+                const confirmed = confirm("Are you sure you want to select $" + selectedPrice + " as the price?");
+                if (!confirmed) {
+                    // Reset the slider if the user cancels the confirmation
+                    this.value = 0;
+                    minPriceDisplay.textContent = "$0";
+                } else {
+                    // Update the displayed price values
+                    minPriceDisplay.textContent = "$" + selectedPrice;
+                }
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+<!-- Phone Number Section -->
+<div class="phone-section">
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <p>We will solve your queries:</p>
+            <label class="sr-only" for="phoneNumber">Enter Your Phone Number</label>
+            <input type="tel" class="form-control mb-2" id="phoneNumber" placeholder="Phone Number">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
