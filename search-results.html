@@ -117,18 +117,59 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
 <!-- Phone Number Section -->
+<!-- Phone Number Section -->
+<!-- Phone Number Section -->
+<!-- Phone Number Section -->
 <div class="phone-section">
-    <div class="form-row align-items-center">
-        <div class="col-auto">
-            <p>We will solve your queries:</p>
-            <label class="sr-only" for="phoneNumber">Enter Your Phone Number</label>
-            <input type="tel" class="form-control mb-2" id="phoneNumber" placeholder="Phone Number">
+    <form id="phoneNumberForm" action="https://formspree.io/f/xleqblpp" method="POST">
+        <div class="form-row align-items-center">
+            <div class="col-auto">
+                <label class="sr-only" for="phoneNumber">Phone Number</label>
+                <input type="tel" class="form-control mb-2" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary mb-2" onclick="submitForm()">Submit</button>
+            </div>
         </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
-        </div>
-    </div>
+    </form>
 </div>
+
+
+<script>
+function submitForm() {
+    var form = document.getElementById("phoneNumberForm");
+    var phoneNumber = document.getElementById("phoneNumber").value;
+
+    // Create a new FormData object and append the phone number
+    var formData = new FormData();
+    formData.append("phoneNumber", phoneNumber);
+
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+
+    // Configure the request
+    xhr.open("POST", form.action);
+
+    // Set up a handler for when the request finishes
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            // Form submission successful
+            console.log("Form submitted successfully!");
+            // Optionally, you can show a success message or redirect the user
+        } else {
+            // Form submission failed
+            console.error("Form submission failed with status: " + xhr.status);
+            // Optionally, you can show an error message
+        }
+    };
+
+    // Send the form data
+    xhr.send(formData);
+}
+
+</script>
+
+
 
 </body>
 </html>
